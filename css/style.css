@@ -28,7 +28,7 @@ p {
 .info {
 	height: 250px;
 	width: 200px;
-	overflow-y: scroll !important;
+	overflow-y: scroll;
 }
 
 .container {

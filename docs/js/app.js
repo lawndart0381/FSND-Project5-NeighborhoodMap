@@ -73,7 +73,7 @@ var ViewModel = function() {
 			// Get courseItem info and call Weather Underground for weather
 			getInfoWindow = jQuery(document).ready(function($) {
 				$.ajax({
-					url: 'http://api.wunderground.com/api/d0d755cd50c01c50/'
+					url: 'https://api.wunderground.com/api/d0d755cd50c01c50/'
 					+ 'geolookup/conditions/q/' + courseItem.lat() + "," +
 					courseItem.lng() + '.json',
 					dataType: "jsonp",

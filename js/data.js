@@ -2717,7 +2717,7 @@ var courses = [
    "lat": 43.528489,
    "lng": -110.845428
  }
-]
+];
 
 var locations = [
  {

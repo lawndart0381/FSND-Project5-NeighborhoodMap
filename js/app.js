@@ -36,8 +36,8 @@ function initializeMap() {
 function gmapError() {
 	"use strict";
 	document.getElementById('gmapError').innerHTML = "<h1>Google Maps did not" +
-	"load. Please refresh the page and/or check your internet connection!</h1>"
-};
+	"load. Please refresh the page and/or check your internet connection!</h1>";
+}
 
 var ViewModel = function() {
 	var self = this;
@@ -73,27 +73,25 @@ var ViewModel = function() {
 			// Get courseItem info and call Weather Underground for weather
 			getInfoWindow = jQuery(document).ready(function($) {
 				$.ajax({
-					url: 'https://api.wunderground.com/api/d0d755cd50c01c50/'
-					+ 'geolookup/conditions/q/' + courseItem.lat() + "," +
-					courseItem.lng() + '.json',
+					url: 'https://api.wunderground.com/api/d0d755cd50c01c50/geolookup/conditions/q/' + courseItem.lat() + "," + courseItem.lng() + '.json',
 					dataType: "jsonp",
 					success: function(parsed_json) {
 						var temp_f =
-							parsed_json['current_observation']['temp_f'];
+							parsed_json.current_observation.temp_f;
 						var weather =
-							parsed_json['current_observation']['weather'];
-						infoWindow.setContent('<div class="info"><strong>'
-							+ courseItem.club()
-							+ '</strong>' + '<p>' + courseItem.city() + ', '
-							+ courseItem.state() + '</p>'
-							+ '<p><strong>Ranked number ' + courseItem.rank()
-							+ ' in the state!</strong></p>'
-							+ '<p>Current Temperature: ' + temp_f + '° F </p>'
-							+ '<p>Current Weather: ' + weather + '</p>'
-							+ '<hr>'
-							+ '<p>Weather info brought to you by:</p>'
-							+ '<img src="img/wundergroundLogo.png"'
-							+ 'alt="Weather Underground Logo"></div>');
+							parsed_json.current_observation.weather;
+						infoWindow.setContent('<div class="info"><strong>' +
+							courseItem.club() +
+							'</strong>' + '<p>' + courseItem.city() + ', ' +
+							courseItem.state() + '</p>' +
+							'<p><strong>Ranked number ' + courseItem.rank() +
+							' in the state!</strong></p>' +
+							'<p>Current Temperature: ' + temp_f + '° F </p>' +
+							'<p>Current Weather: ' + weather + '</p>' +
+							'<hr>' +
+							'<p>Weather info brought to you by:</p>' +
+							'<img src="img/wundergroundLogo.png"' +
+							'alt="Weather Underground Logo"></div>');
 					},
 					error: function(XMLHttpRequest, textStatus, errorThrown) {
 						alert("Weather Underground failed to load, try again.");
@@ -117,7 +115,7 @@ var ViewModel = function() {
 	// Open the course info window when it is clicked from the list.
 	self.showCourse = function(courseItem) {
 		google.maps.event.trigger(courseItem.marker, 'click');
-	}
+	};
 
 	// Reset the map if user clicks the reset button.
 	var resetButton = document.getElementById('reset');

@@ -9,7 +9,7 @@ The application can be run directly by clicking [here](https://sm9378.github.io/
 
 -OR-
 
-The application can also be run by cloning this repository to your machine and opening ```indext.html``` in your browser.
+The application can also be run by cloning this repository to your machine and opening ```indext.html``` in your browser.  **Note: This application does not work in Internet Explorer, but it does work in Edge, Safari, Chrome, and Firefox.**
 
 ## Author
 

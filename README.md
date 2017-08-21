@@ -1,4 +1,5 @@
-# Neighborhood Map - Udacity Project 5: The Frontend - Javascript & AJAX
+# Neighborhood Map - Udacity Project 5
+# The Frontend: Javascript & AJAX
 
 The Neighborhood Map project is the 5th project for the **Udacity Full Stack Web Developer Nanodegree** program.  It is a single page web application that allows the user to search and view the top ranked golf courses in the United States. 
 

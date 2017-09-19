@@ -6,7 +6,7 @@ The Neighborhood Map project is the 5th project for the **Udacity Full Stack Web
 
 ## Usage
 
-The application can be run directly by clicking [here](https://sm9378.github.io/FSND-P5-MAP/).
+The application can be run directly by clicking [here](http://www.mag4417online.com/map/).
 
 -OR-
 
